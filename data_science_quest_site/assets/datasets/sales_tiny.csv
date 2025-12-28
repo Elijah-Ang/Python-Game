@@ -1,0 +1,6 @@
+date,region,category,units,price
+2025-01-01,East,A,10,12.5
+2025-01-01,West,B,7,18.0
+2025-01-02,East,B,4,18.0
+2025-01-03,North,A,9,12.5
+2025-01-03,West,A,3,12.5

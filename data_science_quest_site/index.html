@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Data Science Quest</title>
+
+  <link rel="stylesheet" href="./assets/style.css" />
+
+  <!-- Markdown renderer -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- CodeMirror 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/python/python.min.js"></script>
+
+  <!-- Zip export -->
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-badge">🧭</div>
+      <div>
+        <div style="font-weight:900;">Data Science Quest</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:2px;">A Codédex-style learning game you can host on GitHub Pages</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#/" data-route="home">Map</a>
+      <a href="#/dashboard" data-route="dashboard">Dashboard</a>
+      <a href="#/profile" data-route="profile">Profile</a>
+      <a href="#/about" data-route="about">About</a>
+    </nav>
+  </header>
+
+  <main class="container" id="app"></main>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>

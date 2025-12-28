@@ -1,0 +1,686 @@
+{
+  "title": "Data Science Quest",
+  "version": "1.0.0",
+  "language": "python",
+  "chapters": [
+    {
+      "id": "ch1",
+      "emoji": "\ud83c\udfdc\ufe0f",
+      "title": "Variables, Types & Memory",
+      "blurb": "Store data, format it, and combine it into a real mini-program.",
+      "lessons": [
+        {
+          "id": "ch1-1",
+          "title": "Variables",
+          "md": "assets/lessons/ch1-1.md",
+          "xp": 20,
+          "starter": "name = \"Elijah\"\nage = 20\nprint(name)\nprint(age)\nage = age + 1\nprint(age)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "Elijah"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch1-2",
+          "title": "Strings",
+          "md": "assets/lessons/ch1-2.md",
+          "xp": 20,
+          "starter": "city = \"singapore\"\nprint(city.upper())\nprint(f\"I live in {city.title()}\")\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "SINGAPORE",
+                "I live in Singapore"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch1-3",
+          "title": "Numbers & Math",
+          "md": "assets/lessons/ch1-3.md",
+          "xp": 25,
+          "starter": "a = 7\nb = 2\nprint(a / b)\nprint(a // b)\nprint(a % b)\nprint(float(a) / b)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "3.5",
+                "3",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch1-4",
+          "title": "Booleans",
+          "md": "assets/lessons/ch1-4.md",
+          "xp": 20,
+          "starter": "x = 10\ny = 12\nprint(x == y)\nprint(x < y)\nprint(x >= 10)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "False",
+                "True"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch1-5",
+          "title": "Boss: Sand Sphinx Integration",
+          "md": "assets/lessons/ch1-5.md",
+          "xp": 40,
+          "starter": "item = \"Bubble Tea\"\nqty = 2\nprice = 4.90\ntotal = qty * price\nprint(f\"{qty}x {item} costs ${total:.2f}\")\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "2x Bubble Tea costs $9.80"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "emoji": "\ud83c\udf32",
+      "title": "Loops (Iteration)",
+      "blurb": "Automate tasks and process collections like a pro.",
+      "lessons": [
+        {
+          "id": "ch2-1",
+          "title": "For Loops",
+          "md": "assets/lessons/ch2-1.md",
+          "xp": 25,
+          "starter": "nums = [3, 5, 2, 10]\nTotal = 0\nfor n in nums:\n    Total += n\nprint(Total)\n",
+          "tests": [
+            {
+              "type": "stdout_equals",
+              "expected": "20"
+            }
+          ]
+        },
+        {
+          "id": "ch2-2",
+          "title": "range()",
+          "md": "assets/lessons/ch2-2.md",
+          "xp": 25,
+          "starter": "for i in range(1, 6):\n    print(i*i)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "1",
+                "4",
+                "9",
+                "16",
+                "25"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch2-3",
+          "title": "While Loops",
+          "md": "assets/lessons/ch2-3.md",
+          "xp": 30,
+          "starter": "n = 5\nwhile n > 0:\n    print(n)\n    n -= 1\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "5",
+                "1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "emoji": "\ud83c\udf0a",
+      "title": "Logic & Control Flow",
+      "blurb": "Teach your program how to think and choose.",
+      "lessons": [
+        {
+          "id": "ch3-1",
+          "title": "If / Elif / Else",
+          "md": "assets/lessons/ch3-1.md",
+          "xp": 25,
+          "starter": "score = 78\nif score >= 85:\n    print(\"A\")\nelif score >= 70:\n    print(\"B\")\nelse:\n    print(\"C\")\n",
+          "tests": [
+            {
+              "type": "stdout_equals",
+              "expected": "B"
+            }
+          ]
+        },
+        {
+          "id": "ch3-2",
+          "title": "Logical Operators",
+          "md": "assets/lessons/ch3-2.md",
+          "xp": 25,
+          "starter": "age = 17\nhas_pass = True\ncan_enter = (age >= 18) or has_pass\nprint(can_enter)\nprint(not can_enter)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "True",
+                "False"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "emoji": "\ud83c\udfd8\ufe0f",
+      "title": "Functions",
+      "blurb": "Write reusable tools and build clean pipelines.",
+      "lessons": [
+        {
+          "id": "ch4-1",
+          "title": "Defining Functions",
+          "md": "assets/lessons/ch4-1.md",
+          "xp": 25,
+          "starter": "def greet():\n    print(\"Hello, Data Scientist!\")\n\ngreet()\ngreet()\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "Hello, Data Scientist!"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch4-2",
+          "title": "Parameters & Arguments",
+          "md": "assets/lessons/ch4-2.md",
+          "xp": 25,
+          "starter": "def add(a, b):\n    print(a + b)\n\nadd(3, 4)\nadd(10, -2)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "7",
+                "8"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch4-3",
+          "title": "Return Values",
+          "md": "assets/lessons/ch4-3.md",
+          "xp": 30,
+          "starter": "def area_circle(r):\n    return 3.14159 * r * r\n\narea = area_circle(2)\nprint(f\"{area:.2f}\")\n",
+          "tests": [
+            {
+              "type": "stdout_equals",
+              "expected": "12.57"
+            }
+          ]
+        },
+        {
+          "id": "ch4-4",
+          "title": "Scope",
+          "md": "assets/lessons/ch4-4.md",
+          "xp": 30,
+          "starter": "x = 100\n\ndef demo():\n    x = 5\n    print(x)\n\ndemo()\nprint(x)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "5",
+                "100"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "emoji": "\ud83c\udfd4\ufe0f",
+      "title": "Data Structures",
+      "blurb": "Organize data like a real programmer (and data scientist).",
+      "lessons": [
+        {
+          "id": "ch5-1",
+          "title": "List",
+          "md": "assets/lessons/ch5-1.md",
+          "xp": 25,
+          "starter": "fruits = [\"apple\", \"banana\"]\nfruits.append(\"mango\")\nprint(fruits[0])\nprint(fruits[-1])\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "apple",
+                "mango"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch5-2",
+          "title": "Tuple",
+          "md": "assets/lessons/ch5-2.md",
+          "xp": 20,
+          "starter": "point = (3, 7)\nprint(point[0])\nprint(point[1])\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "3",
+                "7"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch5-3",
+          "title": "Dictionary",
+          "md": "assets/lessons/ch5-3.md",
+          "xp": 30,
+          "starter": "prices = {\"tea\": 4.9, \"coffee\": 5.5}\nprices[\"water\"] = 1.2\nprint(prices[\"tea\"])\nprint(len(prices))\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "4.9",
+                "3"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch5-4",
+          "title": "Set",
+          "md": "assets/lessons/ch5-4.md",
+          "xp": 25,
+          "starter": "nums = [1, 1, 2, 3, 3, 3]\nprint(set(nums))\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "1",
+                "2",
+                "3"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "emoji": "\ud83d\udcdc",
+      "title": "File Handling",
+      "blurb": "Read and write real data without crashing.",
+      "lessons": [
+        {
+          "id": "ch6-1",
+          "title": "Open / Read / Write",
+          "md": "assets/lessons/ch6-1.md",
+          "xp": 35,
+          "starter": "with open(\"note.txt\", \"w\") as f:\n    f.write(\"hello file!\\n\")\n\nwith open(\"note.txt\", \"r\") as f:\n    print(f.read().strip())\n",
+          "tests": [
+            {
+              "type": "stdout_equals",
+              "expected": "hello file!"
+            }
+          ]
+        },
+        {
+          "id": "ch6-2",
+          "title": "Exceptions",
+          "md": "assets/lessons/ch6-2.md",
+          "xp": 30,
+          "starter": "s = \"not_a_number\"\ntry:\n    n = int(s)\n    print(n)\nexcept Exception:\n    print(\"Could not convert\")\n",
+          "tests": [
+            {
+              "type": "stdout_equals",
+              "expected": "Could not convert"
+            }
+          ]
+        },
+        {
+          "id": "ch6-3",
+          "title": "JSON",
+          "md": "assets/lessons/ch6-3.md",
+          "xp": 35,
+          "starter": "import json\nuser = {\"name\":\"Elijah\",\"role\":\"student\"}\nj = json.dumps(user)\nprint(j)\nprint(json.loads(j))\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "\"name\"",
+                "student"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6x",
+      "emoji": "\ud83c\udfdb\ufe0f",
+      "title": "Modules",
+      "blurb": "Use Python\u2019s ecosystem to get superpowers.",
+      "lessons": [
+        {
+          "id": "ch6x-1",
+          "title": "Importing Libraries",
+          "md": "assets/lessons/ch6x-1.md",
+          "xp": 25,
+          "starter": "import math\nprint(math.sqrt(81))\nprint(round(math.pi, 4))\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "9.0",
+                "3.1416"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch7",
+      "emoji": "\ud83c\udf3e",
+      "title": "Pandas & Data Wrangling",
+      "blurb": "The real data science workflow in mini form.",
+      "lessons": [
+        {
+          "id": "ch7-1",
+          "title": "Load data",
+          "md": "assets/lessons/ch7-1.md",
+          "xp": 45,
+          "starter": "import pandas as pd\n\ndf = pd.read_csv(\"./assets/datasets/sales_tiny.csv\")\nprint(df.head())\nprint(df.shape)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "units",
+                "price",
+                "("
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch7-2",
+          "title": "Clean & transform",
+          "md": "assets/lessons/ch7-2.md",
+          "xp": 45,
+          "starter": "import pandas as pd\n\ndf = pd.read_csv(\"./assets/datasets/sales_tiny.csv\")\ndf[\"revenue\"] = df[\"units\"] * df[\"price\"]\nprint(round(df[\"revenue\"].sum(), 2))\n",
+          "tests": []
+        },
+        {
+          "id": "ch7-3",
+          "title": "Filter data",
+          "md": "assets/lessons/ch7-3.md",
+          "xp": 40,
+          "starter": "import pandas as pd\n\ndf = pd.read_csv(\"./assets/datasets/sales_tiny.csv\")\ndf[\"revenue\"] = df[\"units\"] * df[\"price\"]\nsub = df[df[\"region\"] == \"East\"][[\"date\",\"category\",\"revenue\"]]\nprint(sub)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "East"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch7-4",
+          "title": "Group & aggregate",
+          "md": "assets/lessons/ch7-4.md",
+          "xp": 55,
+          "starter": "import pandas as pd\n\ndf = pd.read_csv(\"./assets/datasets/sales_tiny.csv\")\ndf[\"revenue\"] = df[\"units\"] * df[\"price\"]\nrep = df.groupby(\"region\")[\"revenue\"].sum().sort_values(ascending=False)\nprint(rep)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "revenue"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch8",
+      "emoji": "\ud83c\udf03",
+      "title": "Visualization",
+      "blurb": "Communicate insights clearly (even before fancy plots).",
+      "lessons": [
+        {
+          "id": "ch8-1",
+          "title": "Plot types (conceptual)",
+          "md": "assets/lessons/ch8-1.md",
+          "xp": 20,
+          "starter": "title = \"Revenue by Region\"\nx = \"region\"\ny = \"revenue\"\nprint(f\"Plot: {title} | x={x} | y={y}\")\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "Plot: Revenue by Region"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch8-2",
+          "title": "Customization checklist",
+          "md": "assets/lessons/ch8-2.md",
+          "xp": 25,
+          "starter": "checklist = [\"Clear title\",\"Label axes\",\"Units (%, $, etc.)\",\"Legend only if needed\",\"Avoid clutter\"]\nfor item in checklist:\n    print(\"- \" + item)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "- Clear title",
+                "- Avoid clutter"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch9",
+      "emoji": "\ud83e\udde9",
+      "title": "Algorithms",
+      "blurb": "Search, sort, and reason about performance.",
+      "lessons": [
+        {
+          "id": "ch9-1",
+          "title": "Searching",
+          "md": "assets/lessons/ch9-1.md",
+          "xp": 45,
+          "starter": "def linear_search(arr, target):\n    for i, x in enumerate(arr):\n        if x == target:\n            return i\n    return -1\n\nprint(linear_search([4,7,1], 7))\n",
+          "tests": [
+            {
+              "type": "stdout_equals",
+              "expected": "1"
+            }
+          ]
+        },
+        {
+          "id": "ch9-2",
+          "title": "Sorting",
+          "md": "assets/lessons/ch9-2.md",
+          "xp": 25,
+          "starter": "nums = [5, 1, 9, 2]\nprint(sorted(nums))\nprint(sorted(nums, reverse=True))\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "[1, 2, 5, 9]",
+                "[9, 5, 2, 1]"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch9-3",
+          "title": "Big O (conceptual)",
+          "md": "assets/lessons/ch9-3.md",
+          "xp": 25,
+          "starter": "m = {\"O(1)\":\"Same time no matter input.\",\"O(log n)\":\"Grows slowly.\",\"O(n)\":\"Linear growth.\",\"O(n log n)\":\"Efficient sorting.\",\"O(n^2)\":\"Nested loops.\"}\nfor k,v in m.items():\n    print(k + \": \" + v)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "O(1)",
+                "O(n^2)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch9-4",
+          "title": "Recursion",
+          "md": "assets/lessons/ch9-4.md",
+          "xp": 45,
+          "starter": "def fact(n):\n    if n == 1:\n        return 1\n    return n * fact(n-1)\n\nprint(fact(5))\n",
+          "tests": [
+            {
+              "type": "stdout_equals",
+              "expected": "120"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch9_5",
+      "emoji": "\ud83d\udcc8",
+      "title": "Statistics",
+      "blurb": "The math language behind ML and analytics.",
+      "lessons": [
+        {
+          "id": "ch9_5-1",
+          "title": "Mean & Median",
+          "md": "assets/lessons/ch9_5-1.md",
+          "xp": 35,
+          "starter": "nums = [2, 3, 10, 10, 15]\nmean = sum(nums) / len(nums)\nmedian = nums[len(nums)//2]\nprint(mean)\nprint(median)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "8.0",
+                "10"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch9_5-2",
+          "title": "Variance",
+          "md": "assets/lessons/ch9_5-2.md",
+          "xp": 45,
+          "starter": "nums = [1, 2, 3]\nmean = sum(nums) / len(nums)\nvar = sum((x-mean)**2 for x in nums) / len(nums)\nprint(var)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "0.666"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch9_5-3",
+          "title": "Correlation (conceptual)",
+          "md": "assets/lessons/ch9_5-3.md",
+          "xp": 20,
+          "starter": "print(\"Correlation measures how strongly two variables move together in a straight-line relationship.\")\nprint(\"Correlation is not causation.\")\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "Correlation is not causation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch10",
+      "emoji": "\ud83e\udd16",
+      "title": "Machine Learning",
+      "blurb": "From datasets to predictions: the pipeline mindset.",
+      "lessons": [
+        {
+          "id": "ch10-1",
+          "title": "The ML Pipeline",
+          "md": "assets/lessons/ch10-1.md",
+          "xp": 30,
+          "starter": "pipeline = [\"Load data\",\"Clean data\",\"Split train/test\",\"Train model\",\"Evaluate\",\"Tune\",\"Deploy\"]\nfor i, step in enumerate(pipeline, start=1):\n    print(f\"{i}. {step}\")\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "1. Load data",
+                "7. Deploy"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch10-2",
+          "title": "Train/Test Split & Overfitting",
+          "md": "assets/lessons/ch10-2.md",
+          "xp": 25,
+          "starter": "print(\"Overfitting is when a model learns the training data too specifically and performs poorly on new data.\")\nprint(\"Example: a model memorizes exact answers for past questions but cannot answer new ones.\")\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "Overfitting"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "emoji": "\ud83d\udc80",
+      "title": "FINAL BOSS \u2014 Full Stack Data Scientist",
+      "blurb": "Everything together: build a mini end-to-end report.",
+      "lessons": [
+        {
+          "id": "final-1",
+          "title": "Capstone: Revenue Report",
+          "md": "assets/lessons/final-1.md",
+          "xp": 80,
+          "starter": "import pandas as pd\n\ndf = pd.read_csv(\"./assets/datasets/sales_tiny.csv\")\ndf[\"revenue\"] = df[\"units\"] * df[\"price\"]\nreport = df.groupby(\"region\")[\"revenue\"].sum().sort_values(ascending=False)\nprint(report)\n",
+          "tests": [
+            {
+              "type": "stdout_contains",
+              "expected": [
+                "revenue"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
